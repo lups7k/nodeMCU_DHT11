@@ -12,8 +12,7 @@ ESP8266WebServer server(80);
 
 DHT dht(DHTPIN, DHTTYPE);
 
-float temp;
-float humid;
+float temp, humid;
 
 void setup() {
   Serial.begin(115200);
@@ -62,8 +61,8 @@ void handle_NotFound() {
 
 }
 
-String sendHTML(float tempstat, float humidstat) { 
-  String ptr = "<!DOCTYPE html> <html>\n";
+string sendHTML(float tempstat, float humidstat) { 
+  string ptr = "<!DOCTYPE html> <html>\n";
   ptr += "<head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\">\n";
   ptr += "<meta http-equiv='refresh' content='2'>"; 
   ptr += "<link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,400,600\" rel=\"stylesheet\">\n";
