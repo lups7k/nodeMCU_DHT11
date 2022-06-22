@@ -5,7 +5,7 @@
 const char* ssid = "xxxxxxx";  
 const char* password = "xxxxx"; 
 
-ESP8266WebServer server(80);
+ESP8266WebServer server(80); // server port
 
 #define DHTPIN 4 
 #define DHTTYPE DHT11
@@ -15,7 +15,7 @@ DHT dht(DHTPIN, DHTTYPE);
 float temp, humid;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200); // serial port
   delay(50);
   dht.begin();
 
